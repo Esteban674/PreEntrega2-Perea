@@ -550,7 +550,7 @@ while (opcion === -1) {
             }
             );
             alert('Esta salida debido a su longitud se muestra por Consola')
-            console.log(listaHeroes); 0
+            console.log(listaHeroes);
             opcion = -1;
             break;
         }
@@ -845,7 +845,7 @@ while (opcion === -1) {
                         listaHeroes += mostrarHeroe(heroe);
                     })
                     alert('Esta salida debido a su longitud se muestra por Consola')
-                    console.log(listaHeroes); 0
+                    console.log(listaHeroes);
                     opcion = -1;
                 }
             }
@@ -878,7 +878,7 @@ while (opcion === -1) {
                 listaHeroes += mostrarHeroe(heroe);
             })
             alert('Esta salida debido a su longitud se muestra por Consola')
-            console.log(listaHeroes); 0
+            console.log(listaHeroes); 
             opcion = -1;
             break;
         }
