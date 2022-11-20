@@ -545,6 +545,7 @@ while (opcion === -1) {
     switch (opcion) {
         //Listar Heroes (forEach)
         case 1: {
+            let listaHeroes = "";
             heroes.forEach(heroe => {
                 listaHeroes += mostrarHeroe(heroe);
             }
@@ -593,7 +594,11 @@ while (opcion === -1) {
                     while (entrada === '') {
                         entrada = prompt('Va a comparar la inteligencia de los heroes:\n Ingrese el simbolo > para mayor o el simbolo < para menor, luego un espacio seguido del valor numerico base de la comparacion. Ejemplo \"> 100\" para filtrar los de inteligencia mayor que 100')
                         if (entrada === '') {
-                            alert('Por favor ingrese un valor')
+                            alert('Por favor ingrese un valor');
+                            opcion = -1;
+                        }else if (!(entrada.includes('>') || entrada.includes('<'))){
+                            alert('no olvide de anteponer el simbolo < o > luego un espacio y luego el numero');
+                            opcion = -1;
                         } else {
                             const [simbolo, valor] = entrada.split(' ');
                             if (simbolo === '>') {
@@ -636,6 +641,10 @@ while (opcion === -1) {
                         entrada = prompt('Va a comparar la fuerza de los heroes:\n Ingrese el simbolo > para mayor o el simbolo < para menor, luego un espacio seguido del valor numerico base de la comparacion. Ejemplo \"> 100\" para filtrar los de fuerza mayor que 100')
                         if (entrada === '') {
                             alert('Por favor ingrese un valor')
+                            opcion = -1;
+                        }else if (!(entrada.includes('>') || entrada.includes('<'))){
+                            alert('no olvide de anteponer el simbolo < o > luego un espacio y luego el numero');
+                            opcion = -1;
                         } else {
                             const [simbolo, valor] = entrada.split(' ');
                             if (simbolo === '>') {
@@ -678,6 +687,10 @@ while (opcion === -1) {
                         entrada = prompt('Va a comparar la velocidad de los heroes:\n Ingrese el simbolo > para mayor o el simbolo < para menor, luego un espacio seguido del valor numerico base de la comparacion. Ejemplo \"> 100\" para filtrar los de velocidad mayor que 100')
                         if (entrada === '') {
                             alert('Por favor ingrese un valor')
+                            opcion = -1;
+                        }else if (!(entrada.includes('>') || entrada.includes('<'))){
+                            alert('no olvide de anteponer el simbolo < o > luego un espacio y luego el numero');
+                            opcion = -1;
                         } else {
                             const [simbolo, valor] = entrada.split(' ');
                             if (simbolo === '>') {
@@ -720,6 +733,10 @@ while (opcion === -1) {
                         entrada = prompt('Va a comparar la altura de los heroes:\n Ingrese el simbolo > para mayor o el simbolo < para menor, luego un espacio seguido del valor numerico base de la comparacion. Ejemplo \"> 100\" para filtrar los de altura mayor que 100')
                         if (entrada === '') {
                             alert('Por favor ingrese un valor')
+                            opcion = -1;
+                        }else if (!(entrada.includes('>') || entrada.includes('<'))){
+                            alert('no olvide de anteponer el simbolo < o > luego un espacio y luego el numero');
+                            opcion = -1;
                         } else {
                             const [simbolo, valor] = entrada.split(' ');
                             if (simbolo === '>') {
@@ -762,6 +779,10 @@ while (opcion === -1) {
                         entrada = prompt('Va a comparar el peso de los heroes:\n Ingrese el simbolo > para mayor o el simbolo < para menor, luego un espacio seguido del valor numerico base de la comparacion. Ejemplo \"> 100\" para filtrar los de peso mayor que 100')
                         if (entrada === '') {
                             alert('Por favor ingrese un valor')
+                            opcion = -1;
+                        }else if (!(entrada.includes('>') || entrada.includes('<'))){
+                            alert('no olvide de anteponer el simbolo < o > luego un espacio y luego el numero');
+                            opcion = -1;
                         } else {
                             const [simbolo, valor] = entrada.split(' ');
                             if (simbolo === '>') {
@@ -801,6 +822,8 @@ while (opcion === -1) {
 
                 }
             }
+            opcion = -1;
+            break;
         }
         //Existe algun nombre que comience una letra dada (Some)
         case 4: {
@@ -883,7 +906,7 @@ while (opcion === -1) {
             break;
         }
         default: {
-            opcion = -1;
+            
         }
     }
 }
